@@ -1,33 +1,57 @@
 
-const patterns = {
-  emails: /\b[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}\b/g,
-  phoneNumbers: /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g,
-  urls: /https?:\/\/\S+/g,
-  creditCards: /\b\d{4}[- ]?\d{4}[- ]?\d{4}[- ]?\d{4}\b/g,
-  currency: /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g,
-  time: /\b\d{1,2}:\d{2}\s?(?:AM|PM)?\b/g, 
-  htmlTags: /<\/?\w+.*?>/g,
-  hashtags: /#\w+/g
-};
+# ALU Regex Data Extraction
 
+I am creating a project that will extracts various types of data from strings using Regular Expressions (Regex). I will find and extracts patterns like email addresses, phone numbers, URLs, credit card numbers, currency amounts, time formats, HTML tags, and hashtags.
 
-const extractData = (text) => {
-  return Object.fromEntries(
-      Object.entries(patterns).map(([key, pattern]) => [key, text.match(pattern) || []])
-  );
-};
+## My project Project Overview and What is included 
+The goal of this project is to create a tool that uses Regex to detect and extract important information from strings. It handles patterns such as:
+- Email addresses
+- Phone numbers
+- URLs
+- Credit card numbers
+- Currency amounts
+- Time formats
+- HTML tags
+- Hashtags
 
+## The Setup
 
-const sampleText = `
-  Email: user@example.com, firstname.lastname@company.co.uk
-  Phone: (123) 456-7890, 123-456-7890, 123.456.7890
-  URL: https://www.example.com, https://subdomain.example.org/page
-  Credit Card: 1234 5678 9012 3456, 1234-5678-9012-3456
-  Time: 14:30, 2:30 PM
-  HTML: <p>Paragraph</p>, <div class="example">Content</div>, <img src="image.jpg" alt="description">
-  Hashtags: #example, #ThisIsAHashtag
-  Currency: $19.99, $1,234.56
-`;
+### What is needed PREREQUSITS
+Make sure you have **Node.js** and **npm** installed. If not, install them using:
+```bash
+sudo apt update
+sudo apt install nodejs npm
+```
 
-// Run extraction
-console.log(extractData(sampleText));
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kudakwashe17/alu_regex-data-extraction-kudakwashe17.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd alu_regex-data-extraction-kudakwashe17
+   ```
+3. Install dependencies (if needed):
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+Run the JavaScript file to extract data:
+```bash
+node regex-data-extractor.js
+```
+
+## Team Details
+
+- **Kudakwashe Chikovo** - Project Director
+
+## Features
+
+- Regex patterns for extracting emails, phone numbers, URLs, and more.
+- Handles multiple formats and edge cases.
+
+## License
+
+Licensed under the MIT License.
