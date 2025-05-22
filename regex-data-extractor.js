@@ -1,4 +1,4 @@
-// Regular Expressions for extracting data
+
 const patterns = {
   emails: /\b[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}\b/g,
   phoneNumbers: /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g,
@@ -10,14 +10,14 @@ const patterns = {
   hashtags: /#\w+/g
 };
 
-// Function to extract data
+
 const extractData = (text) => {
   return Object.fromEntries(
       Object.entries(patterns).map(([key, pattern]) => [key, text.match(pattern) || []])
   );
 };
 
-// Sample input text
+
 const sampleText = `
   Email: user@example.com, firstname.lastname@company.co.uk
   Phone: (123) 456-7890, 123-456-7890, 123.456.7890
