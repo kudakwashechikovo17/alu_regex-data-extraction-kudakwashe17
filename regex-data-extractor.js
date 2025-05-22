@@ -26,11 +26,11 @@ sudo apt install nodejs npm
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kudakwashe17/alu_regex-data-extraction-kudakwashe17.git
+   git clone https://github.com/kudakwashechikovo17/alu_regex-data-extraction-kudakwashechikovo17.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd alu_regex-data-extraction-kudakwashe17
+   cd alu_regex-data-extraction-kudakwashechikovo17
    ```
 3. Install dependencies (if needed):
    ```bash
